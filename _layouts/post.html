@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="posts">
+  <h1 class="content-subhead">Post</h1>
+
+  <!-- A single blog post -->
+  <section class="post">
+    <header class="post-header">
+
+      <a href="{{ page.url }}"><h2 class="post-title">{{ page.title }}</h2></a>
+
+      <p class="post-meta">
+        By <a href="#" class="post-author">{% if page.author %}{{ page.author}}{% endif %}</a> under {% for category in page.categories %}<a class="post-category post-category-design" href="#">{{ category }}</a>{% endfor %}</p>
+      </header>
+
+      <div class="post-description">
+          {{ content}}
+      </div>
+    </section>
+  </div>

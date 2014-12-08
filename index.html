@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+<!-- A wrapper for all the blog posts -->
+<div class="posts">
+  <h1 class="content-subhead">All Posts</h1>
+
+  <!-- A single blog post -->
+  <section class="post">
+    <header class="post-header">
+      <a href="{{ post.url }}"><h2 class="post-title">{{ post.title }}</h2></a>
+
+      <p class="post-meta">
+        By <a href="#" class="post-author">{% if post.author %}{{ post.author}}{% endif %}</a> under {% for category in post.categories %}<a class="post-category post-category-design" href="#">{{ category }}</a>{% endfor %}</p>
+      </header>
+
+      <div class="post-description">
+        <p>
+          {{ post.content | strip_html | truncatewords: 100 }}
+        </p>
+      </div>
+    </section>
+  </div>
+  {% endfor %}
