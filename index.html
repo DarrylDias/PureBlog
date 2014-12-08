@@ -13,7 +13,7 @@ layout: default
       <a href="{{ post.url }}"><h2 class="post-title">{{ post.title }}</h2></a>
 
       <p class="post-meta">
-        By <a href="#" class="post-author">{% if post.author %}{{ post.author}}{% endif %}</a> under {% for category in post.categories %}<a class="post-category post-category-design" href="#">{{ category }}</a>{% endfor %}</p>
+        Published on {{ post.date | date_to_long_string }} By <a href="#" class="post-author">{% if post.author %}{{ post.author}}{% endif %}</a> under {% for category in post.categories %}<a class="post-category post-category-design" href="#">{{ category }}</a>{% endfor %}</p>
       </header>
 
       <div class="post-description">
